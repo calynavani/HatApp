@@ -42,7 +42,8 @@ import { UpdateUserComponent } from './update-user/update-user.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'ShowHats', component: ShowHatsComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      { path: 'ShowUsers', component: ShowUsersComponent}
+      { path: 'ShowUsers', component: ShowUsersComponent},
+      {path: 'CreateUser', component: CreateUserComponent}
     ])
   ],
   providers: [],
