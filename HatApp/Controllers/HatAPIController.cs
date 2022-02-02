@@ -26,5 +26,24 @@ namespace HatApp.Controllers
             return db.AllUser();
         }
 
+        [HttpGet("GetHat/{id}")]
+        public List<Hats> GetHat(int id)
+        {
+            return db.GetHats(id);
+        }
+
+        [HttpGet("GetUser/{id}")]
+        public List<Users> GetUsers(int id)
+        {
+           return db.GetUser(id);
+        }
+
+        [HttpDelete("DeleteUser/{id}")]
+        public void DeleteUser(int id)
+        {
+            db.DeleteUser(id);
+        }
+
+
     }
 }
