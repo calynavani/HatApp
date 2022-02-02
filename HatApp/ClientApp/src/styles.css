@@ -1,6 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* Provide sufficient contrast against white background */
+
+body{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url(https://media.gq.com/photos/5a04f9a398002d2e253679f5/master/pass/fall-hats-gq-style-0816-01-1.jpg);
+ 
+}
+
 a {
   color: #0366d6;
 }
@@ -13,4 +20,6 @@ code {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
+ 
+  
 }
