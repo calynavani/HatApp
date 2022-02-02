@@ -9,7 +9,7 @@ export class DeleteUserComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() : void{
   }
 
 }
