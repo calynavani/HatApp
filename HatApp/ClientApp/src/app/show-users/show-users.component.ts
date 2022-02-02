@@ -13,7 +13,7 @@ export class ShowUsersComponent implements OnInit {
   constructor(private userDAL: UserService) { }
 
   ngOnInit() {
-    this.userDAL.getAllUsers().subscribe(
+    this.userDAL.GetAllUsers().subscribe(
       (response: User) => {
         let json = Convert.userToJson(response);
         this.currentUser = Convert.toUser(json);
