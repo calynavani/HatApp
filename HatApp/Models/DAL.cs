@@ -54,7 +54,7 @@ namespace HatApp
 
         public List<Users> GetUser(int id)
         {
-            string sql = $"select * from users where id ={id})";
+            string sql = $"select * from users where id ={id}";       
 
             using (var connect = new MySqlConnection(Secret.Connection))
             {
@@ -70,7 +70,7 @@ namespace HatApp
 
         public List<Hats> GetHats(int id)
         {
-            string sql = $"select * from hats where id ={id})";
+            string sql = $"select * from hats where id ={id}";          
 
             using (var connect = new MySqlConnection(Secret.Connection))
             {
@@ -83,6 +83,37 @@ namespace HatApp
 
         }
 
+        public void DeleteHat(int id)
+        {
+            string sql = $"delete from hat where id ={id}";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Hats>(sql);
+                connect.Close();
+            }
+        }
 
+        public void UpdateUser(Users u)
+        {
+            string sql = $"update users set firstname='{u.FirstName}', lastname='{u.LastName}' where id ={u.Id} ";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Hats>(sql);
+                connect.Close();
+            }
+        }
+
+        public void UpdateHat(Hats h)
+        {
+            string sql = $"update hats set type='{h.Type}', material='{h.Material}', color='{h.Color}', images='{h.Images}', facts='{h.Facts}' where id ={h.Id} ";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<Hats>(sql);
+                connect.Close();
+            }
+        }
     }
 }

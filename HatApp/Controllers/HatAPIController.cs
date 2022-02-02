@@ -44,6 +44,29 @@ namespace HatApp.Controllers
             db.DeleteUser(id);
         }
 
+        [HttpDelete("DeleteHat/{id}")]
+        public void DeleteHat(int id)
+        {
+            db.DeleteHat(id);
+        }
+
+
+        [HttpPut("updateuser")]
+        public void UpdateUser(Users u)
+        {
+            db.UpdateUser(u);
+            
+
+        }
+
+        [HttpPut("updatehat")]
+        public void UpdateHat(Hats h)
+        {
+            db.UpdateHat(h);
+
+
+        }
+
 
     }
 }
