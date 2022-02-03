@@ -171,6 +171,51 @@ namespace HatApp
 
         }
 
+        public List<MonthlyHats> GetMonthlyHat(int id)
+        {
+            string sql = $"select * from monthlyhats where userid ={id}";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                List<MonthlyHats> h = connect.Query<MonthlyHats>(sql).ToList();
+                connect.Close();
+
+                return h;
+            };
+
+        }
+
+        public List<MyHats> GetMyHatByUserID(int id)
+        {
+            string sql = $"select * from myhats where userid ={id}";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                List<MyHats> h = connect.Query<MyHats>(sql).ToList();
+                connect.Close();
+
+                return h;
+            };
+
+        }
+
+        public List<MonthlyHats> GetAllMonthlyHats()
+        {
+            string sql = $"select * from monthlyhats";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                List<MonthlyHats> h = connect.Query<MonthlyHats>(sql).ToList();
+                connect.Close();
+
+                return h;
+            };
+
+        }
+
 
     }
 }
