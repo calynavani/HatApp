@@ -44,7 +44,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
       { path: 'CreateHat', component: CreateHatComponent },
       { path: 'ShowUsers', component: ShowUsersComponent},
       {path: 'CreateUser', component: CreateUserComponent},
-      {path: 'MyHats', component: MyHatsComponent}
+      {path: 'MyHats', component: MyHatsComponent}      
     ])
   ],
   providers: [],
