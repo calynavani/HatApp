@@ -6,11 +6,14 @@
 }
 
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   background: #131313;
+}
+
+.cardDeck{
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
 }
 
 .container{

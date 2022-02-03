@@ -6,13 +6,17 @@
 }
 
 body{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
   min-height: 100vh;
   background: #131313;
 }
-
+.cardDeck{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;  
+  align-items: space-between;
+  
+}
 .container{
   position: relative;
 }
@@ -21,7 +25,8 @@ body{
   position: relative;
   width: 320px;
   height: 450px;
-  background: rgb(3,12,73);
+  /*background: rgb(3,12,73);*/
+  background: rgb(1, 61, 72);
   border-radius: 20px;
   overflow: hidden;
 }
