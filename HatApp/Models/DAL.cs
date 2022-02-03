@@ -115,5 +115,62 @@ namespace HatApp
                 connect.Close();
             }
         }
+
+
+        public List<MyHats> GetMyHat(int id)
+        {
+            string sql = $"select * from myhats where id ={id}";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                List<MyHats> h = connect.Query<MyHats>(sql).ToList();
+                connect.Close();
+
+                return h;
+            };
+
+        }
+
+        public List<MyHats> GetAllMyHats()
+        {
+            string sql = $"select * from myhats";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                List<MyHats> h = connect.Query<MyHats>(sql).ToList();
+                connect.Close();
+
+                return h;
+            };
+
+        }
+        public void DeleteMyHat(int id)
+        {
+            string sql = $"delete from myhats where id ={id}";
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<MyHats>(sql);
+                connect.Close();
+            }
+        }
+        public void AddMyHats(int userid, int hatid)
+        {
+            string sql = $"insert into myhats values (0,{userid},{hatid})";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<MyHats>(sql);
+                connect.Close();
+
+              
+            };
+
+        }
+
+
     }
 }
