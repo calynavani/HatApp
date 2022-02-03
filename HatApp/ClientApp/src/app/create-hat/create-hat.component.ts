@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HatService } from '../hat.service';
 
 @Component({
   selector: 'app-create-hat',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateHatComponent implements OnInit {
 
-  constructor() { }
+  constructor(private hatService: HatService) { }
 
   ngOnInit() {
   }
