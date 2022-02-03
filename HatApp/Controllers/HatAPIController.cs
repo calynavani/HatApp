@@ -67,6 +67,29 @@ namespace HatApp.Controllers
 
         }
 
+        [HttpGet("GetMyHat/{id}")]
+        public List<MyHats> GetMyHat(int id)
+        {
+            return db.GetMyHat(id);
+        }
+
+        [HttpGet("GetAllMyHats")]
+        public List<MyHats> GetAllMyHats()
+        {
+            return db.GetAllMyHats();
+        }
+
+        [HttpDelete("DeleteMyHat/{id}")]
+        public void DeleteMyHat(int id)
+        {
+            db.DeleteMyHat(id);
+        }
+
+        [HttpGet("AddMyHats")]
+        public void AddMyHats(int userid, int hatid)
+        {
+            db.AddMyHats(userid, hatid);
+        }
 
     }
 }
