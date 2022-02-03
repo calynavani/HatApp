@@ -3,7 +3,7 @@
     class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
   >
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']"><span style="display: none;">Hemory's</span>HatSpace</a>
+      <a class="navbar-brand" [routerLink]="['/']"><img src="/hem.png"/><span style="display: none;">Hemory's</span>HatSpace</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -46,6 +46,11 @@
           <li class="nav-item" [routerLinkActive]="['link-active']">
             <a class="nav-link text-dark" [routerLink]="['/MyHats']"
               >My Hats</a
+            >
+          </li>
+          <li class="nav-item" [routerLinkActive]="['link-active']">
+            <a class="nav-link text-dark" [routerLink]="['/CreateHat']"
+              >Create Hat</a
             >
           </li>
         </ul>

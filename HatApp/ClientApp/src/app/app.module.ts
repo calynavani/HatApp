@@ -41,10 +41,10 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'ShowHats', component: ShowHatsComponent },
-      { path: 'fetch-data', component: FetchDataComponent },
+      { path: 'CreateHat', component: CreateHatComponent },
       { path: 'ShowUsers', component: ShowUsersComponent},
       {path: 'CreateUser', component: CreateUserComponent},
-      {path: 'MyHats', component: MyHatsComponent}
+      {path: 'MyHats', component: MyHatsComponent}      
     ])
   ],
   providers: [],
