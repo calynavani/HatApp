@@ -15,6 +15,8 @@ import { MyHatsComponent } from './my-hats/my-hats.component';
 import { ShowHatsComponent } from './show-hats/show-hats.component';
 import { ShowUsersComponent } from './show-users/show-users.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { HatService } from './hat.service';
+import { UserService } from './user.service';
 
 @NgModule({
   declarations: [
@@ -39,11 +41,11 @@ import { UpdateUserComponent } from './update-user/update-user.component';
       { path: 'ShowHats', component: ShowHatsComponent },
       { path: 'CreateHat', component: CreateHatComponent },
       { path: 'ShowUsers', component: ShowUsersComponent},
-      {path: 'CreateUser', component: CreateUserComponent},
-      {path: 'MyHats', component: MyHatsComponent}      
+      { path: 'CreateUser', component: CreateUserComponent },
+      { path: 'ShowUsers/MyHats/:id', component: MyHatsComponent }      
     ])
   ],
-  providers: [],
+  providers: [HatService,UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
