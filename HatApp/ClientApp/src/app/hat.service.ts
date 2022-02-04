@@ -19,4 +19,7 @@ export class HatService {
   GetAllHats(): Observable<any>{
     return this.http.get<Hat>(this.url +"/hats/");
   }
+  DeleteHat(id:number) {
+    return this.http.delete(this.url + "/DeleteMyHat/{id}");
+    }
 }
