@@ -3,7 +3,7 @@
 /* Provide sufficient contrast against white background */
 
 body{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Poppins', sans-serif;
   background-image: url(https://media.gq.com/photos/5a04f9a398002d2e253679f5/master/pass/fall-hats-gq-style-0816-01-1.jpg);
   background-repeat: no-repeat;
   background-position: left top;
@@ -24,4 +24,17 @@ code {
   border-color: #1861ac;
  
   
+}
+body::-webkit-scrollbar {
+  width: 25px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: whitesmoke;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color:rgb(1, 61, 72);    /* color of the scroll thumb */
+   border-radius: 10%;       /* roundness of the scroll thumb */
+  /*border: 5px solid whitesmoke;  /* creates padding around scroll thumb */
 }
