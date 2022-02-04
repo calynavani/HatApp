@@ -1,1 +1,20 @@
-<p>show-users works!</p>
+<div class="cardDeck">
+<div *ngFor="let user of currentUser">
+    <div class="container">
+        <div class="card">
+          <div class="imgBx">
+            <img src="./hem.png">
+          </div>
+          <div class="contentBx">
+            <h2>{{user.firstName | titlecase}} {{user.lastName | titlecase}} </h2>
+            <div class="color">
+                <h3></h3>
+            </div>
+            <div class="size">
+            </div>            
+            <a href="#">View {{user.firstName}}'s Collection</a>
+          </div>
+        </div>
+      </div>
+</div>
+</div>

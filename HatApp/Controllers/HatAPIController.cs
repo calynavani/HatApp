@@ -91,5 +91,22 @@ namespace HatApp.Controllers
             db.AddMyHats(userid, hatid);
         }
 
+        [HttpGet("GetMonthlyHat/{id}")]
+        public List<MonthlyHats> GetMonthlyHat(int id)
+        {
+            return db.GetMonthlyHat(id);
+        }
+
+        [HttpGet("GetMyHatByUserID/{id}")]
+        public List<MyHats> GetMyHatByUserID(int id)
+        {
+            return db.GetMyHatByUserID(id);
+        }
+
+        [HttpGet("GetAllMonthlyHats")]
+        public List<MonthlyHats> GetAllMonthlyHats()
+        {
+            return db.GetAllMonthlyHats();
+        }
     }
 }
