@@ -233,3 +233,7 @@ _Pvt_Extensions
 Secret.cs
 
 *.suo
+
+web.config
+
+
