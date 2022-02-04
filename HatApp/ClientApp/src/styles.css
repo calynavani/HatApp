@@ -25,3 +25,16 @@ code {
  
   
 }
+body::-webkit-scrollbar {
+  width: 25px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: whitesmoke;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color:rgb(1, 61, 72);    /* color of the scroll thumb */
+   border-radius: 10%;       /* roundness of the scroll thumb */
+  /*border: 5px solid whitesmoke;  /* creates padding around scroll thumb */
+}
