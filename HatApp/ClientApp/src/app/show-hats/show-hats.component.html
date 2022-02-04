@@ -14,9 +14,10 @@
                 <h3>Did you know? <br/>
                 {{hat.facts}}</h3>
             </div>            
-            <a href="#">Buy Now</a>
+            
           </div>
         </div>
       </div>
+      <div><button (click)="AddToCollection(hat.id)">Add to Collection</button><button (click)="RemoveFromCollection(hat.id)">Remove from my Collection</button></div>
 </div>
 </div>
