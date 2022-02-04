@@ -24,6 +24,7 @@ export interface MyCollection {
 // Converts JSON strings to/from your types
 export class UOConvert {
   public static toUserObject(json: string): UserObject {
+
         return JSON.parse(json);
     }
 
