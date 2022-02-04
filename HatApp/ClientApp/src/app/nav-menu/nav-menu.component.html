@@ -1,9 +1,9 @@
 <header>
   <nav
-    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3"
+    class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light  box-shadow mb-3"
   >
     <div class="container">
-      <a class="navbar-brand" [routerLink]="['/']"><img src="/hem.png" style="height: 35px;"/><span style="display: none;">Hemory's</span>HatSpace</a>
+      <a class="navbar-brand" [routerLink]="['/']"><img src="/hem.png" style="height: 35px;"/><span style="display: none;">Hemory's</span><span style="color: whitesmoke;">HatSpace</span></a>
    
       <button
         class="navbar-toggler"
@@ -20,7 +20,7 @@
         class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse"
         [ngClass]="{ show: isExpanded }"
       >
-      <div style="font-family: cursive; border-radius: 35%;">
+      <div clas="navbarStyle">
         <ul class="navbar-nav flex-grow">
           <li
             class="nav-item"
