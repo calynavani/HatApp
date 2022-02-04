@@ -34,11 +34,50 @@ namespace HatApp
                 connect.Open();
                 List<Users> u = connect.Query<Users>(sql).ToList();
                 connect.Close();
-
                 return u;
             };
+        }
 
+        public Users GetUserByID(int id)
+        {
+            string usql = $"select * from users where id={id}";
+            string mhsql = $"select * from myhats where userid={id}";
+            string tmhsql = $"select * from monthlyhats where userid={id}";
+            Users u = new Users();
+            List<MyHats> mhl = new List<MyHats>();
+            List<MonthlyHats> tmhl = new List<MonthlyHats>();
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                u = connect.Query<Users>(usql).First();
+                mhl = connect.Query<MyHats>(mhsql).ToList();
+                tmhl = connect.Query<MonthlyHats>(tmhsql).ToList();
+                connect.Close();
+            }
+            u.MyCollection = AssociateHats(mhl);
+            u.Worn30 = AssociateHats(tmhl);
+            return u;
+        }
+        public List<Hats> AssociateHats(List<MyHats> collection)
+        {
+            List<Hats> MyCollection = new List<Hats>();
+            foreach(MyHats mh in collection)
+            {
+                Hats h = GetHat(mh.hatid);
+                MyCollection.Add(h);
+            }
+            return MyCollection;
+        }
 
+        public List<Hats> AssociateHats(List<MonthlyHats> collection)
+        {
+            List<Hats> MyCollection = new List<Hats>();
+            foreach (MonthlyHats mh in collection)
+            {
+                Hats h = GetHat(mh.HatId);
+                MyCollection.Add(h);
+            }
+            return MyCollection;
         }
 
         public void DeleteUser(int id)
@@ -83,6 +122,19 @@ namespace HatApp
 
         }
 
+        public Hats GetHat(int id)
+        {
+            string sql = $"select * from hats where id ={id}";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                Hats h = connect.Query<Hats>(sql).ToList().First();
+                connect.Close();
+
+                return h;
+            };
+        }
         public void DeleteHat(int id)
         {
             string sql = $"delete from hat where id ={id}";
