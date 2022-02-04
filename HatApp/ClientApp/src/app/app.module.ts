@@ -11,8 +11,6 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CreateHatComponent } from './create-hat/create-hat.component';
 import { CreateUserComponent } from './create-user/create-user.component';
-import { DeleteHatComponent } from './delete-hat/delete-hat.component';
-import { DeleteUserComponent } from './delete-user/delete-user.component';
 import { MyHatsComponent } from './my-hats/my-hats.component';
 import { ShowHatsComponent } from './show-hats/show-hats.component';
 import { ShowUsersComponent } from './show-users/show-users.component';
@@ -27,8 +25,6 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     FetchDataComponent,
     CreateHatComponent,
     CreateUserComponent,
-    DeleteHatComponent,
-    DeleteUserComponent,
     MyHatsComponent,
     ShowHatsComponent,
     ShowUsersComponent,
