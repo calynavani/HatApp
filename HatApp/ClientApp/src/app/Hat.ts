@@ -6,3 +6,12 @@ export interface Hat{
     images:string;
     facts:string;
 }
+
+export class HatConvert {
+    public static toHat(json: string): Hat [] {
+        return JSON.parse(json);
+    }
+    public static hatToJson(value: Hat): string {
+        return JSON.stringify(value);
+    }
+}
