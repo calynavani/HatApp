@@ -26,5 +26,9 @@ id = Number(this.route.snapshot.paramMap.get('id'));
 
 ngOnInit() {
 }
+randomHatPicker(){
+  let target=document.getElementById("randomDiv");
+  for(let i: number=0;i<=this.currentUser.myCollection.length+1;i++){}
+}
 
 }
