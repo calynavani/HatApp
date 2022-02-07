@@ -8,6 +8,7 @@ export interface UserObject {
     id:           number;
     firstName:    string;
     lastName:     string;
+    hatOfTheDay:  Hat;
     myCollection: MyCollection[];
     worn30:       MyCollection[];
 }
