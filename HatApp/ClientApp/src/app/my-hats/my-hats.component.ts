@@ -27,8 +27,8 @@ id = Number(this.route.snapshot.paramMap.get('id'));
       (response: any) => {
         let json= HatConvert.hatToJson(response);
         this.allHats = HatConvert.toHat(json);
-      }
-    );
+      } 
+    ); 
   
 }
 
