@@ -1,8 +1,27 @@
 <p>my-hats works!</p>
 
 <h3>Hello {{currentUser.firstName}}</h3>
-<button (click)="randomHatPicker()">Rando</button>
-<div id="randomDiv">...Loading</div>
+<div id="HatOfTheDay">
+  <div class="container">
+    <div class="card">
+      <div class="imgBx">
+        <img src="{{currentUser.hatOfTheDay.images}}">
+      </div>
+      <div class="contentBx">
+        <h2>{{currentUser.hatOfTheDay.type | titlecase}} - {{currentUser.hatOfTheDay.material | titlecase}} </h2>
+        <div class="color">
+            <h3>Color: {{currentUser.hatOfTheDay.color | titlecase}}</h3>
+        </div>
+        <div class="size">
+            <h3>Did you know? <br/>
+            {{currentUser.hatOfTheDay.facts}}</h3>
+        </div>            
+        <div><button (click)="RemoveFromCollection(currentUser.hatOfTheDay.id)">Remove from my Collection</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class = 'cardDeck'>
     <div *ngFor="let hat of currentUser.myCollection">
         <div class="container">

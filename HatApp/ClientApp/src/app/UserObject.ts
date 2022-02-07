@@ -4,10 +4,13 @@
 //
 //   const user = Convert.toUser(json);
 
+import { Hat } from "./Hat";
+
 export interface UserObject {
     id:           number;
     firstName:    string;
     lastName:     string;
+    HatOfTheDay:  Hat;
     myCollection: MyCollection[];
     worn30:       MyCollection[];
 }

@@ -37,23 +37,40 @@ namespace HatApp
                 return u;
             };
         }
-
+        public int GenerateRandomID()
+        {
+            Random no = new Random();
+            string sql = "select * from hats";
+            List<Hats> h = new List<Hats>();
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                h = connect.Query<Hats>(sql).ToList();
+                connect.Close();               
+            };
+            return no.Next(0, h.Count);
+        }
         public Users GetUserByID(int id)
         {
+            int recommendId = GenerateRandomID();
+            string rsql = $"select * from hats where id={recommendId}";
             string usql = $"select * from users where id={id}";
             string mhsql = $"select * from myhats where userid={id}";
             string tmhsql = $"select * from monthlyhats where userid={id}";
             Users u = new Users();
+            Hats ofTheDay = new Hats();
             List<MyHats> mhl = new List<MyHats>();
             List<MonthlyHats> tmhl = new List<MonthlyHats>();
             using (var connect = new MySqlConnection(Secret.Connection))
             {
                 connect.Open();
                 u = connect.Query<Users>(usql).First();
+                ofTheDay = connect.Query<Hats>(rsql).First();
                 mhl = connect.Query<MyHats>(mhsql).ToList();
                 tmhl = connect.Query<MonthlyHats>(tmhsql).ToList();
                 connect.Close();
             }
+            u.HatOfTheDay = ofTheDay;
             u.MyCollection = AssociateHats(mhl);
             u.Worn30 = AssociateHats(tmhl);
             return u;
