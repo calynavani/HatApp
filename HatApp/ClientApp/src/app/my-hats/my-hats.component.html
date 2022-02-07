@@ -1,6 +1,6 @@
-<p>my-hats works!</p>
 
-<h3>Hello {{currentUser.firstName}}</h3>
+
+<h1 style="color: white" >Hello {{currentUser.firstName}}</h1>
 <div id="HatOfTheDay">
   <div class="container">
     <div class="card">
@@ -16,7 +16,7 @@
             <h3>Did you know? <br/>
             {{currentUser.hatOfTheDay.facts}}</h3>
         </div>            
-        <div><button (click)="RemoveFromCollection(currentUser.hatOfTheDay.id)">Remove from my Collection</button></div>
+        <div><a href="#"  (click)="RemoveFromCollection(currentUser.hatOfTheDay.id)">Remove from my Collection</a></div>
       </div>
     </div>
   </div>
@@ -38,7 +38,7 @@
                     <h3>Did you know? <br/>
                     {{hat.facts}}</h3>
                 </div>            
-                <div><button (click)="RemoveFromCollection(hat.id)">Remove from my Collection</button></div>
+                <div><a href="#" (click)="RemoveFromCollection(hat.id)">Remove from my Collection</a></div>
               </div>
             </div>
           </div>

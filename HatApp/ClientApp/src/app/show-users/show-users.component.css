@@ -25,9 +25,10 @@ body{
   position: relative;
   width: 320px;
   height: 450px;
-  background: rgb(1, 61, 72);
+  background: rgb(33, 143, 163);
   border-radius: 20px;
   overflow: hidden;
+ 
 }
 
 .container .card:before{
@@ -40,6 +41,7 @@ body{
   background: whitesmoke;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
+
 }
 
 .container .card:hover:before{
