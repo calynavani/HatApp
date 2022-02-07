@@ -10,7 +10,7 @@ export interface UserObject {
     id:           number;
     firstName:    string;
     lastName:     string;
-    HatOfTheDay:  Hat;
+    hatOfTheDay:  Hat;
     myCollection: MyCollection[];
     worn30:       MyCollection[];
 }

@@ -14,6 +14,7 @@ import { HatService } from '../hat.service';
 })
 export class MyHatsComponent implements OnInit {
 currentUser:UserObject;
+allHats: Hat[] = [];
 id = Number(this.route.snapshot.paramMap.get('id'));
   constructor(private userService: UserService, private route: ActivatedRoute, private hatService: HatService) {
   this.userService.GetUserObject(this.id).subscribe(
@@ -23,8 +24,12 @@ id = Number(this.route.snapshot.paramMap.get('id'));
       console.log(this.currentUser);
     }
   );
-
-  
+    this.hatService.GetAllHats().subscribe(
+      (response: any) => {
+        let json= HatConvert.hatToJson(response);
+        this.allHats = HatConvert.toHat(json);
+      } 
+    );   
 }
 
 ngOnInit() {
