@@ -112,5 +112,11 @@ namespace HatApp.Controllers
         {
             return db.GetAllMonthlyHats();
         }
+
+        [HttpGet("MonthlyHats")]
+        public void CreateMonthlyHats(int u, int h, string d)
+        {
+            db.CreateMonthlyHat(u,h,d);
+        }
     }
 }

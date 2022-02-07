@@ -285,6 +285,20 @@ namespace HatApp
 
         }
 
+        public void CreateMonthlyHat(int u, int h, string d)
+        {
+            string sql = $"insert into monthlyhats values (0,{u},{h},'{d}')";
+
+            using (var connect = new MySqlConnection(Secret.Connection))
+            {
+                connect.Open();
+                connect.Query<MonthlyHats>(sql);
+                connect.Close();
+
+            };
+
+        }
+
 
     }
 }
