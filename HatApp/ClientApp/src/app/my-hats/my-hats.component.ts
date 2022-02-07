@@ -44,4 +44,10 @@ randomHatPicker(){
   }
 }
 
+RemoveFromCollection(id: number) {
+
+  this.hatService.DeleteMyHat(id);
+
+}
+
 }

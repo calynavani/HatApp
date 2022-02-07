@@ -200,7 +200,7 @@ namespace HatApp
         }
         public void DeleteMyHat(int id)
         {
-            string sql = $"delete from myhats where id ={id}";
+            string sql = $"delete from myhats where hatid ={id}";
             using (var connect = new MySqlConnection(Secret.Connection))
             {
                 connect.Open();

@@ -28,6 +28,9 @@ export class HatService {
     return this.http.get(this.url + "/GetMonthlyHat/" + id);
   }
   DeleteHat(id:number) {
-     this.http.delete(this.url + "/DeleteMyHat/{id}");
+     this.http.delete(this.url + "/DeleteHat/{id}");
+    }
+  DeleteMyHat(id:number) {
+      this.http.delete(this.url + "DeleteMyHat/{id}");
     }
 }
