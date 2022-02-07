@@ -12,8 +12,10 @@ namespace HatApp
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public Hats HatOfTheDay { get; set; }
         public List<Hats> MyCollection { get; set; } = new List<Hats>();
         public List<Hats> Worn30 { get; set; } = new List<Hats>();
+        
         public Users(string firstname, string lastname)
         {
             this.FirstName = firstname;

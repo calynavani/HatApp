@@ -1,7 +1,14 @@
 a.navbar-brand {
   white-space: normal;
-  text-align: center;
+  text-align:center;
   word-break: break-all;
+}
+
+.navbarStyle{
+ border: groove;
+ border-radius: 35%;
+
+ background: whitesmoke;
 }
 
 html {

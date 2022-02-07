@@ -23,10 +23,9 @@ body{
 
 .container .card{
   position: relative;
-  width: 320px;
-  height: 450px;
-  /*background: rgb(3,12,73);*/
-  background: rgb(1, 61, 72);
+  width: 420px;
+  height: 480px;
+  background: rgb(33, 143, 163);
   border-radius: 20px;
   overflow: hidden;
 }

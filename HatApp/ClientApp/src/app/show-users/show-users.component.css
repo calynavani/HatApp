@@ -12,8 +12,9 @@ body{
 
 .cardDeck{
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: space-around;
+  align-items: space-between;
 }
 
 .container{
@@ -24,9 +25,10 @@ body{
   position: relative;
   width: 320px;
   height: 450px;
-  background: rgb(3,12,73);
+  background: rgb(33, 143, 163);
   border-radius: 20px;
   overflow: hidden;
+ 
 }
 
 .container .card:before{
@@ -39,6 +41,7 @@ body{
   background: whitesmoke;
   clip-path: circle(150px at 80% 20%);
   transition: 0.5s ease-in-out;
+
 }
 
 .container .card:hover:before{

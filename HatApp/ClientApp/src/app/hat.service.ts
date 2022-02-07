@@ -27,4 +27,10 @@ export class HatService {
   GetMyMonthlyHats(id: number): Observable<any>{
     return this.http.get(this.url + "/GetMonthlyHat/" + id);
   }
+  DeleteHat(id:number) {
+     this.http.delete(this.url + "/DeleteHat/{id}");
+    }
+  DeleteMyHat(id:number) {
+      this.http.delete(this.url + "DeleteMyHat/{id}");
+    }
 }

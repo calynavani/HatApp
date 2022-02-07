@@ -14,7 +14,9 @@ export class UserService {
   }
 
   GetUser(id:number): Observable<any>{
+
     return(this.http.get(this.url +"/GetUser/" +id));
+
   }
 
   GetAllUsers(): Observable<any>{
@@ -22,11 +24,13 @@ export class UserService {
   }
 
   DeleteUser(id:number){
-    return this.http.delete(this.url + "/delete/" + id);
+    return this.http.delete(this.url + "/DeleteUser/{id}");
   }
+
   GetUserObject(id:number): Observable<any>{
     return this.http.get(this.url + "/GetUserModel/" + id);
   }
+
   
   
   

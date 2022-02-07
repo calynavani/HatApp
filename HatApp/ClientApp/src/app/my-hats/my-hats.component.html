@@ -1,4 +1,8 @@
-<h3>Hello {{currentUser.firstName}}</h3>
+
+
+
+<h1 style="color: white" >Hello {{currentUser.firstName}}</h1>
+
 <div id="HatOfTheDay">
   <div class="container">
     <div class="card">
@@ -13,12 +17,13 @@
         <div class="size">
             <h3>Did you know? <br/>
             {{currentUser.hatOfTheDay.facts}}</h3>
-        </div>            
-        <div><button>my Collection</button></div> 
+
+        <div><a href="#"  (click)="RemoveFromCollection(currentUser.hatOfTheDay.id)">Remove from my Collection</a></div>
       </div>
     </div>
   </div>
 </div>
+
 <div id="pickAHat" style="background-color: aqua; border-radius: 20px; padding: 15px; overflow-y: scroll; overflow-x:hidden; height:500px; width: 500px;">
 <div *ngFor="let notAll of allHats">
   <div class="container">
@@ -41,6 +46,7 @@
   </div>
 </div>
 </div>
+
 <div class = 'cardDeck'>
     <div *ngFor="let hat of currentUser.worn30">
         <div class="container">
@@ -57,7 +63,7 @@
                     <h3>Did you know? <br/>
                     {{hat.facts}}</h3>
                 </div>            
-                <a href="#">Wear It</a><a href="#">Remove from My Collection</a>
+                <div><a href="#" (click)="RemoveFromCollection(hat.id)">Remove from my Collection</a></div>
               </div>
             </div>
           </div>

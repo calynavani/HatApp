@@ -20,7 +20,8 @@ id = Number(this.route.snapshot.paramMap.get('id'));
   this.userService.GetUserObject(this.id).subscribe(
     (response: any)=>{
       let json = UOConvert.userObjectToJson(response);
-      this.currentUser = UOConvert.toUserObject(json);      
+      this.currentUser = UOConvert.toUserObject(json);
+      console.log(this.currentUser);
     }
   );
     this.hatService.GetAllHats().subscribe(
@@ -28,11 +29,15 @@ id = Number(this.route.snapshot.paramMap.get('id'));
         let json= HatConvert.hatToJson(response);
         this.allHats = HatConvert.toHat(json);
       } 
-    ); 
-  
+    );   
 }
 
 ngOnInit() {
+}
+
+
+RemoveFromCollection(id: number) {
+  this.hatService.DeleteMyHat(id);
 }
 
 }

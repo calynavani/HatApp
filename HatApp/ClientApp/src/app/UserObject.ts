@@ -4,6 +4,8 @@
 //
 //   const user = Convert.toUser(json);
 
+import { Hat } from "./Hat";
+
 export interface UserObject {
     id:           number;
     firstName:    string;
@@ -24,11 +26,12 @@ export interface MyCollection {
 
 // Converts JSON strings to/from your types
 export class UOConvert {
-    public static toUserObject(json: string): User {
+  public static toUserObject(json: string): UserObject {
+
         return JSON.parse(json);
     }
 
-    public static userObjectToJson(value: User): string {
+    public static userObjectToJson(value: UserObject): string {
         return JSON.stringify(value);
     }
 }

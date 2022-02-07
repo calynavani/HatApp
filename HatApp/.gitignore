@@ -231,3 +231,9 @@ _Pvt_Extensions
 .fake/
 
 Secret.cs
+
+*.suo
+
+web.config
+
+
