@@ -50,12 +50,12 @@ body{
 
 .pickHatDivs li{
   list-style-type: none;
+}
 
 .recentlyWorn{
   width: 100%;
   
 }
-
 
 .recentlyWorn .titleH3{
   position: relative;
