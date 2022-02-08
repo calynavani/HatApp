@@ -10,58 +10,13 @@ body{
   min-height: 100vh;
   background: #131313;
 }
-
-.titleH3 {
-  background-color: whitesmoke;
-  border-radius: 15px 50px 15px 50px;
-  padding: 15px;
-  max-width: fit-content;
-}
-
 .cardDeck{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;  
-  align-items: space-between;  
+  align-items: space-between;
+  
 }
-
-#pickAHat {  
-  border-radius: 5px; 
-  padding: 0px; 
-  overflow-y: hidden; 
-  overflow-x: scroll; 
-  scrollbar-width: none;
-  -ms-overflow-style: none;  
-  height: 550px; 
-  width: 500px;
-  display: flex;  
-  justify-content: flex-start;    
-}
-
-.pickHatDivs{  
-  display: flex;
-  flex-direction: row;
-}
-
-.pickHatDivs .titleH3 {
-  position: relative;
-  left:15%
-}
-
-.pickHatDivs li{
-  list-style-type: none;
-}
-
-.recentlyWorn{
-  width: 100%;  
-}
-
-.recentlyWorn .titleH3{
-  position: relative;
-  left: 50%;
-}
-
-
 .container{
   position: relative;
 }
