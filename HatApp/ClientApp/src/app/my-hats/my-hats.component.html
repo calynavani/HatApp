@@ -2,8 +2,10 @@
 
 
 <h1 style="color: white" >Hello {{currentUser.firstName}}</h1>
-
-<div id="HatOfTheDay">
+<ul class="pickHatDivs">
+<li>
+<div id="HatOfTheDay" >
+  <h3 class="titleH3">Wear this Hat</h3>
   <div class="container">
     <div class="card">
       <div class="imgBx">
@@ -23,8 +25,11 @@
     </div>
   </div>
 </div>
-
-<div id="pickAHat" style="background-color: aqua; border-radius: 20px; padding: 15px; overflow-y: scroll; overflow-x:hidden; height:500px; width: 500px;">
+</div>
+</li>
+<li>
+<h3 class="titleH3">Pick one from the Collection</h3>
+<div id="pickAHat">
 <div *ngFor="let notAll of allHats">
   <div class="container">
     <div class="card">
@@ -46,6 +51,10 @@
   </div>
 </div>
 </div>
+</li>
+</ul>
+<div id="recentlyWorn">
+<h3 class="titleH3">Recently Worn </h3>
 
 <div class = 'cardDeck'>
     <div *ngFor="let hat of currentUser.worn30">
