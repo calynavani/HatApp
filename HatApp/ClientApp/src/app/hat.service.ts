@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-
+import { MonthlyHats } from './Monthly-Hats';
 
 @Injectable({
   providedIn: 'root'
@@ -33,4 +33,12 @@ export class HatService {
   DeleteMyHat(id:number) {
       this.http.delete(this.url + "DeleteMyHat/{id}");
     }
+  WearThisHat(uid: number, hid: number, lwd: string): Observable<any> {
+    let tmh: MonthlyHats;
+    tmh.id =0;
+    tmh.userId = uid;
+    tmh.hatId = hid;
+    tmh.lastWornDate = lwd;
+    return this.http.post(this.url + "/MonthlyHats/", tmh);
+  }
 }

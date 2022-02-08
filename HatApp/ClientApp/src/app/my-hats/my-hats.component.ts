@@ -35,7 +35,16 @@ id = Number(this.route.snapshot.paramMap.get('id'));
 ngOnInit() {
 }
 
-
+WearAHat(hid: number){
+  let today = new Date();
+  let dd = String(today.getDate()).padStart(2,'0');
+  let mm = String(today.getMonth()).padStart(2,'0');
+  let yyyy = String(today.getFullYear);
+  let lwd = mm + "/" + dd + "/" + yyyy;
+  this.hatService.WearThisHat(this.id,hid,lwd).subscribe(
+    (response: any) => {location.reload()}
+  );
+}
 RemoveFromCollection(id: number) {
   this.hatService.DeleteMyHat(id);
 }

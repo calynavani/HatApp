@@ -113,10 +113,13 @@ namespace HatApp.Controllers
             return db.GetAllMonthlyHats();
         }
 
-        [HttpGet("MonthlyHats")]
-        public void CreateMonthlyHats(int u, int h, string d)
+        [HttpPost("MonthlyHats/")]
+        public void CreateMonthlyHats(MonthlyHats h)
         {
-            db.CreateMonthlyHat(u,h,d);
+            int uid = h.UserId;
+            int hid = h.HatId;
+            string date = h.LastWornDate;
+            db.CreateMonthlyHat(uid,hid,date);
         }
     }
 }
